@@ -22,7 +22,26 @@ export type ActiveProject = Project & {
   currentStage?: string;
 };
 
-export const site = {
+/**
+ * Explicit site-wide data shape. Array entries are intentionally typed as
+ * Project/ActiveProject so optional fields can be added or omitted without
+ * making React infer incompatible unions.
+ */
+export type SiteContent = {
+  brand: string;
+  heading: string;
+  intro: string;
+  social: {
+    telegram: string;
+    instagram: string;
+    youtube: string;
+  };
+  completed: Project[];
+  active: ActiveProject[];
+  planned: Project[];
+};
+
+export const site: SiteContent = {
   brand: 'DN Collectibles',
   heading: 'Роадмап',
   intro: 'Актуальные проекты: что уже завершено, над чем работаем сейчас и какие фигурки появятся дальше.',
@@ -43,7 +62,7 @@ export const site = {
       imagePosition: 'center 40%',
       imageAlt: 'Временная иллюстрация серии фигурок TRITIA',
     },
-  ] satisfies Project[],
+  ],
   active: [
     {
       id: 'punkdepo',
@@ -55,7 +74,7 @@ export const site = {
       imageAlt: 'Временная иллюстрация будущих фигурок PUNKDEPO',
       // Set progressPercent and currentStage after you confirm real status.
     },
-  ] satisfies ActiveProject[],
+  ],
   planned: [
     {
       id: 'hatters',
@@ -83,5 +102,5 @@ export const site = {
       imagePosition: 'center 44%',
       imageAlt: 'Временная иллюстрация проекта Три Дня Дождя',
     },
-  ] satisfies Project[],
-} as const;
+  ],
+};
