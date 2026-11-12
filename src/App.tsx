@@ -234,7 +234,7 @@ function App() {
             <SocialLink type="youtube" onMissing={setNotice} />
           </div>
         </div>
-        <div className="container footer__bottom"><span>© {year} DN Collectibles</span><span>Сделано с вниманием к деталям.</span></div>
+        <div className="container footer__bottom"><span>© {year} DN Collectibles</span><span>Сделано с вниманием к деталям!</span></div>
       </footer>
 
       {notice && (
