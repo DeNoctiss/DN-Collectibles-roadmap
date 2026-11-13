@@ -192,10 +192,15 @@ function App() {
                         <div className="active-progress__row"><span>Прогресс проекта</span><strong>{project.progressPercent}%</strong></div>
                         <div className="active-progress__track"><span style={{ width: `${Math.min(100, Math.max(0, project.progressPercent))}%` }} /></div>
                       </div>
-                    ) : (
+                    ) : !project.currentStage ? (
                       <div className="active-card__status-note"><Layers3 size={17} /> Этапы будут обновляться по мере работы</div>
+                    ) : null}
+                    {project.currentStage && (
+                      <div className="active-stage" aria-label={`Текущий этап: ${project.currentStage}`}>
+                        <span className="active-stage__label"><b>Текущий этап</b></span>
+                        <span className="active-stage__badge">{project.currentStage}</span>
+                      </div>
                     )}
-                    {project.currentStage && <p className="active-stage">Текущий этап: <strong>{project.currentStage}</strong></p>}
                   </div>
                   <div className="active-card__decoration" aria-hidden="true"><span>DN</span></div>
                 </article>

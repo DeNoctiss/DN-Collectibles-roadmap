@@ -45,11 +45,11 @@ export const site: SiteContent = {
   brand: 'DN Collectibles',
   heading: 'Роадмап',
   intro: 'Актуальные проекты: что уже завершено, над чем работаем сейчас и какие фигурки появятся дальше.',
-  /** Put your real public URLs here. Empty strings show a non-misleading placeholder. */
+  /** Official DN Collectibles social media links. */
   social: {
-    telegram: '',
-    instagram: '',
-    youtube: '',
+    telegram: 'https://t.me/DeNoctisHome',
+    instagram: 'https://www.instagram.com/denoctiss/',
+    youtube: 'https://www.youtube.com/@denoctis9378',
   },
   /** Latest first. The UI displays a maximum of 3 completed projects. */
   completed: [
@@ -59,8 +59,8 @@ export const site: SiteContent = {
       code: 'MUS-0001 — MUS-0003',
       category: 'Музыканты',
       image: '/images/tritia-preview.webp',
-      imagePosition: 'center 40%',
-      imageAlt: 'Временная иллюстрация серии фигурок TRITIA',
+      imagePosition: 'center 45%',
+      imageAlt: 'Готовые фигурки TRITIA: Иван с гитарой, Слава с микрофоном и Андрей с барабанными палочками',
     },
   ],
   active: [
@@ -71,8 +71,8 @@ export const site: SiteContent = {
       category: 'Музыканты',
       image: '/images/punkdepo-preview.webp',
       imagePosition: 'center 41%',
-      imageAlt: 'Временная иллюстрация будущих фигурок PUNKDEPO',
-      // Set progressPercent and currentStage after you confirm real status.
+      imageAlt: 'Концепты фигурок PUNKDEPO: Игорь с бирюзовой гитарой и Руслан с микрофоном',
+      currentStage: 'Создание 3D-модели',
     },
   ],
   planned: [
@@ -83,7 +83,7 @@ export const site: SiteContent = {
       category: 'Музыканты',
       image: '/images/hatters-preview.webp',
       imagePosition: 'center 40%',
-      imageAlt: 'Временная иллюстрация The Hatters',
+      imageAlt: 'Логотип The Hatters',
     },
     {
       id: 'gojo',
@@ -91,7 +91,7 @@ export const site: SiteContent = {
       category: 'Аниме',
       image: '/images/gojo-preview.webp',
       imagePosition: 'center 42%',
-      imageAlt: 'Временная иллюстрация фигурки Сатору Годжо',
+      imageAlt: 'Сатору Годжо в повязке на глазах',
     },
     {
       id: 'tdd',
@@ -100,7 +100,7 @@ export const site: SiteContent = {
       category: 'Музыканты',
       image: '/images/tdd-preview.webp',
       imagePosition: 'center 44%',
-      imageAlt: 'Временная иллюстрация проекта Три Дня Дождя',
+      imageAlt: 'Логотип Три Дня Дождя',
     },
   ],
 };
